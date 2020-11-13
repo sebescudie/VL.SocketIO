@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="OxuMSh4FFShNjL8EqIjplf" LanguageVersion="2020.3.0.68" Version="0.128">
+  <NugetDependency Id="RwKiqF0CE2QOdnZ5w2Nf1l" Location="VL.CoreLib" Version="2020.3.0-0068-gbfc5bf7649" />
+  <Patch Id="CJsm5xpQxBQPrXeKnGn6eE">
+    <Canvas Id="PMe2uTu3pSAMPgBRVw58yH" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="UdbGGIqCOc5QcyvIo6NP4t">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="P6AUT4ladfSQYZ9xPua3JA">
+        <Canvas Id="JhbvhpmNVNuOLdkaBem0Uy" CanvasType="Group">
+          <Node Bounds="481,425" Id="HekQqxJbEluO07L6F3efJy">
+            <p:NodeReference LastCategoryFullName="IO.SocketIO" LastSymbolSource="VL.SocketIO.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SocketIoClient" />
+            </p:NodeReference>
+            <Pin Id="ITQBwjquSC0NDnGC52VmDM" Name="IP Address" Kind="InputPin" />
+            <Pin Id="KTqUtcbHmGLNWf90Li40J4" Name="Port" Kind="InputPin" />
+            <Pin Id="FLKwFRj3mAVPTRcSTZmvht" Name="Connect" Kind="InputPin" />
+            <Pin Id="VynWkNtfIDwLHJyz4wSDYT" Name="Disconnect" Kind="InputPin" />
+            <Pin Id="EDPDA9S1TLALjpdu8nrspQ" Name="Output" Kind="OutputPin" />
+            <Pin Id="NWkacVhWzwYO1rTtdDCiuy" Name="Connected" Kind="OutputPin" />
+          </Node>
+          <Pad Id="VkbEerLeq0hLPUL4J0GkZZ" Comment="Connect" Bounds="534,372,35,15" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="KIfkrtR4HDAQaSNQUyS0Tr" Comment="Port" Bounds="508,339,35,15" ShowValueBox="true" isIOBox="true" Value="8080">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="RC7eH6SQBp0MgBCuF34Euj" Comment="IP Address" Bounds="483,307,73,10" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Bcw5UyVisdQQG0y6wNmgOp" Comment="Disconnect" Bounds="559,399,35,15" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="V7ElGzjbkPaNpjPFMGcU1G" Comment="Connected" Bounds="559,468,24,4" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="480,627,65,19" Id="VWp3b5oqkmtQLhydLIQ1eu">
+            <p:NodeReference LastCategoryFullName="IO.SocketIO" LastSymbolSource="VL.SocketIO.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Emit" />
+            </p:NodeReference>
+            <Pin Id="RROKEEBu6d3ORZ231RI2ka" Name="Input" Kind="InputPin" />
+            <Pin Id="NasMYAQDF65LMQbZYjdWEo" Name="Name" Kind="InputPin" />
+            <Pin Id="FmFmNttdzpKOIXvNcSJcVv" Name="Value" Kind="InputPin" />
+            <Pin Id="IIw4aSXRx3FN2q52gTUrKj" Name="Emit" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Node>
+          <Pad Id="LBgpsAleSRHPAW434yigVm" Comment="Name" Bounds="502,560,58,15" ShowValueBox="true" isIOBox="true" Value="echo">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="GCqJoy8uJz8MLSsU3z7Ndx" Comment="Emit" Bounds="542,610,35,15" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AFjdK8KiGI1Nt8sIwoBBT1" Comment="Value" Bounds="522,585,86,15" ShowValueBox="true" isIOBox="true" Value="penis">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="741,583,30,19" Id="N2jyMiCeiTxPUOUCFqTjGu">
+            <p:NodeReference LastCategoryFullName="IO.SocketIO" LastSymbolSource="VL.SocketIO.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="On" />
+            </p:NodeReference>
+            <Pin Id="NWeTZig3fxgM3ZOXktXp3R" Name="Input" Kind="InputPin" />
+            <Pin Id="VYcdhktlQhnNZcH0F4Cdi7" Name="Name" Kind="InputPin" />
+            <Pin Id="IWQ63AAmVSENa2lzNdKLZY" Name="Subject" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="741,623,65,19" Id="DEBFYK12IiTPUWliAuPRdw">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="UEdXtZkPSKxMRDje5nJd9J" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="Cu6uvi7vLm1PzsAKGl7CwG" Name="Reset" Kind="InputPin" />
+            <Pin Id="QFAyMo5V0W0PDdflsqtc8f" Name="Value" Kind="OutputPin" />
+            <Pin Id="Vm6yZWWCtHPPbjMBWYuPaD" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="EERmQ21JbriM4HTAG80Djw" Comment="" Bounds="743,680,35,15" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="PY6dZcffdwCPWOOPrE6PBV" Comment="On Data" Bounds="803,670,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IYLZFtfGy8YL4w7tCr33WW" Comment="Name" Bounds="768,559,50,15" ShowValueBox="true" isIOBox="true" Value="dolphin">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="ARwa5w5CUNPO28rwr6JnTV" Name="Create" />
+        <Patch Id="HAGHM1oFzymPIsP5A7ihfb" Name="Update" />
+        <ProcessDefinition Id="RXOf4L95TgQPJvTHb9B6nz">
+          <Fragment Id="QMrFszq3QMdNZfgC7K4Eam" Patch="ARwa5w5CUNPO28rwr6JnTV" Enabled="true" />
+          <Fragment Id="JutcYznQ0xMPjhYM7hMDBn" Patch="HAGHM1oFzymPIsP5A7ihfb" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="PoZTTwYw76QO7MRynWU7u1" Ids="VkbEerLeq0hLPUL4J0GkZZ,FLKwFRj3mAVPTRcSTZmvht" />
+        <Link Id="KkBcRn8FzSkPfh6oV9PkA1" Ids="KIfkrtR4HDAQaSNQUyS0Tr,KTqUtcbHmGLNWf90Li40J4" />
+        <Link Id="T55Bk1KWA3oPc6TUKVIvaX" Ids="RC7eH6SQBp0MgBCuF34Euj,ITQBwjquSC0NDnGC52VmDM" />
+        <Link Id="RvU9DrXxe1rNv2l9AOX7Wk" Ids="Bcw5UyVisdQQG0y6wNmgOp,VynWkNtfIDwLHJyz4wSDYT" />
+        <Link Id="SZBm8fmb5sYLTPKtUmotqM" Ids="NWkacVhWzwYO1rTtdDCiuy,V7ElGzjbkPaNpjPFMGcU1G" />
+        <Link Id="Dz1cYR2yFCPPpT2sLQBTBS" Ids="EDPDA9S1TLALjpdu8nrspQ,RROKEEBu6d3ORZ231RI2ka" />
+        <Link Id="Pi6cLfs10rVMDEriJmsNI2" Ids="LBgpsAleSRHPAW434yigVm,NasMYAQDF65LMQbZYjdWEo" />
+        <Link Id="FN9p3DwfKE9Lsws1lASD5u" Ids="GCqJoy8uJz8MLSsU3z7Ndx,IIw4aSXRx3FN2q52gTUrKj" />
+        <Link Id="JNqtAhu3WFxOkxcByLjmGF" Ids="AFjdK8KiGI1Nt8sIwoBBT1,FmFmNttdzpKOIXvNcSJcVv" />
+        <Link Id="S4kxYnhS2FTQZU79zGouGK" Ids="EDPDA9S1TLALjpdu8nrspQ,NWeTZig3fxgM3ZOXktXp3R" />
+        <Link Id="MyEh2btNTgzPak4ycR4ZAK" Ids="IWQ63AAmVSENa2lzNdKLZY,UEdXtZkPSKxMRDje5nJd9J" />
+        <Link Id="Aq02NHekQ5SPfK21ZL02IN" Ids="QFAyMo5V0W0PDdflsqtc8f,EERmQ21JbriM4HTAG80Djw" />
+        <Link Id="MAqQDJz1wR9LEUTJ9XNauY" Ids="Vm6yZWWCtHPPbjMBWYuPaD,PY6dZcffdwCPWOOPrE6PBV" />
+        <Link Id="QvjTFmTy0cQLOulAHNcIJw" Ids="IYLZFtfGy8YL4w7tCr33WW,VYcdhktlQhnNZcH0F4Cdi7" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="RqegEoZgd2oPlUX3Tru58r" Location="VL.Stride" Version="0.8.35-gbbc5702f0e" />
+  <NugetDependency Id="DdYjoklXVFiLjkPfoZ9oGW" Location="VL.SocketIO" Version="0.0.0.0" />
+</Document>
