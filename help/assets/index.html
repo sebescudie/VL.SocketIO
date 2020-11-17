@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <!-- UIKit CSS fraework -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+        <!-- SocketIO -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
+        <title>Remote Control</title>
+    </head>
+
+    <body>
+        <div class="uk-container">
+            <div class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-center">
+                    <a href="" class="uk-navbar-item uk-logo">VL.SocketIO web page demo</a>
+                </div>
+            </div>
+            
+
+            <form class="uk-form-horizontal uk-margin-large">
+                <fieldset class="uk-fieldset">
+                    <legend class="uk-legend">Drawing control</legend>
+                    
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-horizontal-select">Background color</label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select uk-width-1-4" id="form-horizontal-select" oninput="SetBackgroundColor(this.selectedIndex)">
+                                <option>Green</option>
+                                <option>Blue</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label">Drawing</div>
+                        <div class="uk-form-controls uk-form-controls-text">
+                            <label><input class="uk-radio" type="radio" name="radio" value = "stroked" oninput="SetDrawingMode(this.value)"> Stroked</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio" value = "fill" checked oninput="SetDrawingMode(this.value)"> Fill</label>
+                        </div>
+                    </div>
+                    
+                    <div class="uk-margin">
+                        <div class="uk-form-label">Effects</div>
+                        <div class="uk-form-controls uk-form-controls-text">
+                            <label><input class="uk-checkbox" type="checkbox" id="enableColorFilter" oninput="SetEffects()"> Color filter</label><br>
+                            <label><input class="uk-checkbox" type="checkbox" id="enableDropShadow" oninput="SetEffects()"> Drop shadow</label>
+                        </div>
+                    </div>
+                    
+                    <div class="uk-margin">
+                        <div class="uk-form-label">Radius</div>
+                        <div class="uk-form-controls uk-form-controls-text">
+                            <input class="uk-range uk-width-1-4" type="range" min=0.02 max=0.5 step=0.01 oninput="SetRadius(this.value)">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <h2 class="uk-legend">From vvvv</h2>
+            <form class="uk-form-horizontal uk-margin-large">
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="framerate">Framerate</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input uk-width-1-4" id="framerate" type="text" placeholder="The circle's position" disabled>
+                    </div>
+                </div>
+
+
+            </form>
+        
+        </div>
+
+        <script>
+
+            var socket = io()
+
+            // Sends the index of the selected item in the dropdown list
+            function SetBackgroundColor(value){
+                console.log("Selected background color :" + value)
+                socket.emit('setBackgroundColor', value)
+            }
+
+            // Sends a string describing the draw mode
+            function SetDrawingMode(value){
+                console.log("Selected drawing mode :" + value)
+                socket.emit('setDrawingMode', value)
+            }
+
+            // Let's build a JSON object that we'll parse in VVVV
+            function SetEffects(){
+                enableColorFilter = document.getElementById("enableColorFilter")
+                enableDropShadow = document.getElementById("enableDropShadow")
+
+                console.log("Color filter enabled : " + enableColorFilter.checked)
+                console.log("Drop shadow enabled : " + enableDropShadow.checked)
+
+                socket.emit('setEffects', {enableColorFilter:enableColorFilter.checked, enableDropShadow:enableDropShadow.checked})
+            }
+
+            // Sets the radius
+            function SetRadius(value){
+                console.log("Set circle radius to " + value)
+                socket.emit('setRadius', value)
+            }
+
+            // Set framerate in frame page
+            socket.on('update_framerate', function(data)
+            {
+                document.getElementById('framerate').value = data
+            })
+        </script>
+    </body>
+</html>
