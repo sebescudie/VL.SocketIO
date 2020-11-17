@@ -1,6 +1,6 @@
 # VL.SocketIO
 
-[![Nuget](https://img.shields.io/nuget/v/VL.SocketIO?style=flat-square)](https://www.nuget.org/packages/VL.SocketIO)
+[![Nuget](https://img.shields.io/nuget/vpre/VL.SocketIO?style=flat-square)](https://www.nuget.org/packages/VL.SocketIO)
 
 _A SocketIO client plugin for VL_
 
