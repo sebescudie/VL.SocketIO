@@ -60,11 +60,6 @@
           <Patch Id="MNWGE7tlSTXQWShFLlsnBM" Name="Update">
             <Pin Id="FUZ3GfPGN2hNojnhQ4Q1me" Name="Show" Kind="InputPin" Bounds="476,438" />
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="ORv29l9dZaXNsKbbyvnzx8">
             <Fragment Id="HSGPkjB9CYgPvvnvaM3I20" Patch="CCHinFF9TScQV2YDotm1tk" Enabled="true" />
             <Fragment Id="Di0EX6IXtZ5LI7qFkJ5UpF" Patch="MNWGE7tlSTXQWShFLlsnBM" Enabled="true" />
@@ -267,11 +262,6 @@
               </p:TypeAnnotation>
             </Pin>
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="E2jhkxMhHAMQJAMgzJQK87">
             <Fragment Id="VTBk1tbglFzP5rw3BsaWue" Patch="JC8O2fKS5sLOuLfBWtmGSD" Enabled="true" />
             <Fragment Id="QZSngPsmD6GQKTs8Og6uKp" Patch="QfXbs9oVSJUQS5g7NqF2wA" Enabled="true" />
@@ -336,6 +326,7 @@
               <CategoryReference Kind="Category" Name="IO" />
               <CategoryReference Kind="Category" Name="SocketIO" />
               <Choice Kind="ProcessAppFlag" Name="SocketIoClient" />
+              <PinReference Kind="InputPin" Name="IP Address" />
             </p:NodeReference>
             <Pin Id="PDSTBaQ3r9NMx677XonqqW" Name="IP Address" Kind="InputPin" />
             <Pin Id="NefB4r0384iOe1SM6RO1Ik" Name="Port" Kind="InputPin" />
