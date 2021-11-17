@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GpmgSlin0XfMYXWGa2Bk0e" LanguageVersion="2021.3.0.58" Version="0.128">
-  <NugetDependency Id="UkjmWeJtc9qOvZ3b7yMAzq" Location="VL.CoreLib" Version="2021.3.0-0058-g62182f8fd0" />
+<Document xmlns:p="property" Id="GpmgSlin0XfMYXWGa2Bk0e" LanguageVersion="2021.4.0.627" Version="0.128">
+  <NugetDependency Id="UkjmWeJtc9qOvZ3b7yMAzq" Location="VL.CoreLib" Version="2021.4.0-0627-g75aacc9894" />
   <Patch Id="IjS8ue0nO60MY2WgT2pwLc">
     <Canvas Id="QhsELyPOkHBQD1MKp4m3Je" DefaultCategory="IO.SocketIO" CanvasType="FullCategory">
       <!--
@@ -1273,24 +1273,6 @@
             <ControlPoint Id="TMMCS14txriPpss59q225H" Bounds="410,353" />
             <ControlPoint Id="MinivPbrDxtN1SRJQIe8lq" Bounds="606,356" />
           </Canvas>
-          <Patch Id="SJIV3zya7I0Mi0LC9xC1YH" Name="Create" />
-          <Patch Id="UeNH4IsGp0DMIjouaRAUQE" Name="Update">
-            <Pin Id="LGFRWNPXJCRNmCDIB7C8fb" Name="Output" Kind="OutputPin" Bounds="461,464" />
-            <Pin Id="RA7oqhmWV5dPvDfjTGobGS" Name="Connected" Kind="OutputPin" Bounds="540,466" />
-            <Pin Id="FpOVb2Z8S5GOUA9xdfZ5nq" Name="IP Address" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="ArGj4IeEgW2PbalBaDmr2k" Name="Port" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="I2ecF3nSBtaOYmQ23ccrds" Name="Disconnect" Kind="InputPin" Bounds="500,349" />
-            <Pin Id="BvYiIB4zu84NUsuB0Ym4Mr" Name="Connect" Kind="InputPin" Bounds="450,317" />
-            <Pin Id="Rj1ayknKPMEMWbii9aVkNJ" Name="Log Received Events To Console" Kind="InputPin" Bounds="595,358" Visibility="Optional" />
-          </Patch>
           <ProcessDefinition Id="MhYZgsUJhgHLdXx1k4esr3">
             <Fragment Id="FBHSW4iywvTLPQByUi28JU" Patch="SJIV3zya7I0Mi0LC9xC1YH" Enabled="true" />
             <Fragment Id="N3lphV0mT9HO9JL2JlPZqZ" Patch="UeNH4IsGp0DMIjouaRAUQE" Enabled="true" />
@@ -1311,6 +1293,24 @@
           <Link Id="LPKI5xCOeACLePbQ9qe1Cp" Ids="BvYiIB4zu84NUsuB0Ym4Mr,TMMCS14txriPpss59q225H" IsHidden="true" />
           <Link Id="UsKklOo5YG5M3FQPMt6kH2" Ids="MinivPbrDxtN1SRJQIe8lq,U3oENvrUiqpQTbMG9ODexj" />
           <Link Id="KvHtNRM71ciPzBlPGZHYcd" Ids="Rj1ayknKPMEMWbii9aVkNJ,MinivPbrDxtN1SRJQIe8lq" IsHidden="true" />
+          <Patch Id="SJIV3zya7I0Mi0LC9xC1YH" Name="Create" />
+          <Patch Id="UeNH4IsGp0DMIjouaRAUQE" Name="Update">
+            <Pin Id="FpOVb2Z8S5GOUA9xdfZ5nq" Name="IP Address" Kind="InputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="ArGj4IeEgW2PbalBaDmr2k" Name="Port" Kind="InputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="BvYiIB4zu84NUsuB0Ym4Mr" Name="Connect" Kind="InputPin" Bounds="450,317" />
+            <Pin Id="I2ecF3nSBtaOYmQ23ccrds" Name="Disconnect" Kind="InputPin" Bounds="500,349" />
+            <Pin Id="Rj1ayknKPMEMWbii9aVkNJ" Name="Log Received Events To Console" Kind="InputPin" Bounds="595,358" Visibility="Optional" />
+            <Pin Id="LGFRWNPXJCRNmCDIB7C8fb" Name="Output" Kind="OutputPin" Bounds="461,464" />
+            <Pin Id="RA7oqhmWV5dPvDfjTGobGS" Name="Connected" Kind="OutputPin" Bounds="540,466" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -1402,11 +1402,6 @@
             </Pin>
             <Pin Id="VMgns0ShtCCLu02hUeWOOC" Name="Output" Kind="OutputPin" Bounds="669,470" />
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="N8tJSpjaPDUM3q2pUIVryG">
             <Fragment Id="EMl69lN1uPjQRnwC4N9llI" Patch="HxOP7r10aiaOxd61DibzHc" Enabled="true" />
             <Fragment Id="UM2QHrfilSbOS8URGjQO5x" Patch="MVvKWYFwkN9QEAXg3cKuWV" Enabled="true" />
@@ -1416,7 +1411,7 @@
           <Link Id="MOo9hhV3rvCOtE5RyVCcpB" Ids="I1coxQsbGdJNdkIDxwaIqb,AgWdP0tMe4LNpLOn6BclBK" />
           <Link Id="LOFT05DUEurM8EX5IuQvMr" Ids="JgpipzOufapQdZW3t95Mgx,NDM2cEt5a7GPp8MpKZL2ke" />
           <Slot Id="KkFCQF8rPyjMRi0l44iQ0J" Name="Output">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation p:Type="TypeReference">
               <Choice Kind="TypeFlag" Name="Subject" />
               <p:TypeArguments>
                 <TypeReference>
@@ -1457,8 +1452,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="JljaCj9GrswNDOudAbolbK" Location="VL.Stride" Version="0.9.68-gf30cfa608a" />
-  <NugetDependency Id="VYeK93ZG3CtQOKL1F9Op2Z" Location="H.Socket.IO" Version="1.1.7" />
+  <NugetDependency Id="JljaCj9GrswNDOudAbolbK" Location="VL.Stride" Version="2021.4.0-0627-g75aacc9894" />
   <PlatformDependency Id="KDrIBqAiBR2LwUNrXMnhF6" Location="System.Runtime" />
-  <NugetDependency Id="RG843bxUKuwMxQS5o25bb3" Location="H.WebSockets" Version="1.1.7" />
+  <NugetDependency Id="Ky2loLEvNNHOwThF0cOCuD" Location="H.Socket.IO" Version="1.2.7" />
+  <NugetDependency Id="RrlzIwq9D57MHLuvBuWIcv" Location="H.WebSockets" Version="1.2.7" />
 </Document>
