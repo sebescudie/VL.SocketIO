@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.SocketIO</id>
-    <version>1.0.0-preview03</version>
+    <version>1.0.0-preview04</version>
     <title>VL.SocketIO</title>
     <authors>sebescudie, havendv</authors>
     <owners>sebescudie</owners>
